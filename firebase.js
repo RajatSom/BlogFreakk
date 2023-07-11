@@ -3,24 +3,25 @@ import 'firebase/auth'
 import 'firebase/firestore'
 import 'firebase/storage'
 
-var firebaseConfig = {
-  apiKey: "AIzaSyDCGbSiWSYH3MtCzlUUncyxqmjj89_5fm4",
-  authDomain: "nextblog-2b750.firebaseapp.com",
-  projectId: "nextblog-2b750",
-  storageBucket: "nextblog-2b750.appspot.com",
-  messagingSenderId: "1029248936203",
-  appId: "1:1029248936203:web:470383cd17c90932949a0e"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyCh5d4b6lQyWu5xluDskkiVZTSe8xaQZDE",
+  authDomain: "blogdb-1850e.firebaseapp.com",
+  projectId: "blogdb-1850e",
+  storageBucket: "blogdb-1850e.appspot.com",
+  messagingSenderId: "429061273645",
+  appId: "1:429061273645:web:28fae426d0eb60496a60a4",
+  measurementId: "G-S12R0ZR4SP"
+};
 
 
-if(!firebase.apps.length) firebase.initializeApp(firebaseConfig)
+if (!firebase.apps.length) firebase.initializeApp(firebaseConfig)
 
 
-const auth  = firebase.auth()
+const auth = firebase.auth()
 const db = firebase.firestore()
 const storage = firebase.storage()
 const serverTimestamp = firebase.firestore.FieldValue.serverTimestamp
 
-export {auth,db,storage,serverTimestamp}
+export { auth, db, storage, serverTimestamp }
 
 
