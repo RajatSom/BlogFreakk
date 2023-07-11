@@ -12,10 +12,6 @@ body {
   border-radius: 5px;
 }
 
-.navbar {
-  opacity: 1;
-}
-
 .load {
   background-color: rgb(79, 79, 79);
 }
