@@ -88,7 +88,7 @@ setMsg("")
                                            <button className="btn btn-success">Message Now</button>
                              </form>
                          </div>
-                         </div> : <h5 className="text-center">For Comment  Login Please</h5>
+                         </div> : <h5 className="text-center">For Comment Please Login</h5>
                      }
                      <div className="row pt-3">
                         {
