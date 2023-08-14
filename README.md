@@ -1,5 +1,7 @@
 ## Next + Firebase Blog app 🔥
 
+Welcome to BlogFreakk! This repository hosts the source code for my blog website where you can post blogs, explore other's blogs and leave your thoughts! Responsive UI allows the user to visit the website on PC, mobile or any other device. The combination of a user-friendly environment and a simple yet elegant design creates an exceptional and delightful experience!
+
 ## Getting Started
 
 To set up the project locally, follow these steps:
