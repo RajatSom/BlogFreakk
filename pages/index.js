@@ -2,8 +2,7 @@ import Layout from '../components/Layout'
 
 import Link from 'next/link'
 import { db } from '../firebase'
-import { useState } from 'react'
-
+import { useState, useEffect } from 'react'
 export default function Home({ allblogs }) {
   // console.log(allblogs)
   const [blogs, setblogs] = useState(allblogs)
@@ -28,6 +27,51 @@ export default function Home({ allblogs }) {
       setEnd(true)
     }
   }
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrolled = window.scrollY;
+  //     const parallaxElement = document.querySelector('.hero');
+  //     const speedFactor = 0.5;
+  //     if (parallaxElement) {
+  //       parallaxElement.style.backgroundPositionY = -((scrolled * speedFactor) + 180) + 'px';
+  //     }
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+  useEffect(() => {
+    let rafId;
+    const parallaxElement = document.querySelector('.hero');
+    const speedFactor = 0.5;
+
+    const handleScroll = () => {
+      rafId = requestAnimationFrame(() => {
+        const scrolled = window.scrollY;
+        if (parallaxElement) {
+          const yOffset = scrolled * speedFactor;
+          parallaxElement.style.backgroundPositionY = `-${yOffset + 135}px`;
+        }
+      });
+    };
+
+    // Set initial background position
+    if (parallaxElement) {
+      parallaxElement.style.backgroundPositionY = '-135px';
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+    };
+  }, []);
   return (
     <>
       <Layout>
