@@ -15,6 +15,6 @@ running the project using earlier versions of npm.
 
 ## Usage
 
-Visit the deployed blog at https://blog-freakk-qffuoa715-rajatsom.vercel.app/ to read the latest blogs, add your own blogs, leave comments, and explore the content.
+Visit the deployed blog at https://blog-freakk-kcwr-d7iv-iss8qln2q-rajatsoms-projects.vercel.app/ to read the latest blogs, add your own blogs, leave comments, and explore the content.
 
 Thank you for visiting my blog website repository!
